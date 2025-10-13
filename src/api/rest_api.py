@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from decimal import Decimal, InvalidOperation
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 import uuid
 
 from src.models.order import Order, OrderSide, OrderType
@@ -53,7 +53,7 @@ class RESTAPI:
                     side=side,
                     quantity=quantity,
                     price=price,
-                    timestamp=datetime.utcnow(),
+                    timestamp=datetime.now(timezone.utc),
                     user_id=data.get('user_id')
                 )
                 

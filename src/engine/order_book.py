@@ -2,7 +2,7 @@ import heapq
 from collections import deque
 from decimal import Decimal
 from typing import Dict, List, Tuple, Optional
-from datetime import datetime
+from datetime import datetime, timezone
 import logging
 
 from src.models.order import Order, OrderSide, OrderType
@@ -77,7 +77,7 @@ class OrderBook:
                     aggressor_side=order.side.value,
                     maker_order_id=resting_order.order_id,
                     taker_order_id=order.order_id,
-                    timestamp=datetime.utcnow()
+                    timestamp=datetime.now(timezone.utc)
                 )
                 trades.append(trade)
                 
@@ -134,7 +134,7 @@ class OrderBook:
                     aggressor_side=order.side.value,
                     maker_order_id=resting_order.order_id,
                     taker_order_id=order.order_id,
-                    timestamp=datetime.utcnow()
+                    timestamp=datetime.now(timezone.utc)
                 )
                 trades.append(trade)
                 

@@ -1,0 +1,74 @@
+{
+  "throughput": {
+    "total_orders": 900,
+    "total_time_seconds": 0.13911676406860352,
+    "throughput_ops": 6469.3856705592825,
+    "average_latency_ms": 0.15263345506456164,
+    "min_latency_ms": 0.0,
+    "max_latency_ms": 9.907245635986328,
+    "p95_latency_ms": 0.9999275207519531,
+    "p99_latency_ms": 5.199432373046875
+  },
+  "order_types": {
+    "limit": {
+      "processed_orders": 200,
+      "throughput_ops": 5493.3420647653975,
+      "average_latency_ms": 0.14973759651184082
+    },
+    "market": {
+      "processed_orders": 200,
+      "throughput_ops": 3987.720157253483,
+      "average_latency_ms": 0.21322846412658691
+    },
+    "ioc": {
+      "processed_orders": 200,
+      "throughput_ops": 6020.676092729491,
+      "average_latency_ms": 0.16609430313110352
+    },
+    "fok": {
+      "processed_orders": 200,
+      "throughput_ops": 7643.935776639755,
+      "average_latency_ms": 0.13082265853881836
+    }
+  },
+  "concurrent": {
+    "total_orders": 500,
+    "processed_orders": 500,
+    "concurrency_level": 5,
+    "total_time_seconds": 0.05279254913330078,
+    "throughput_ops": 9471.03347363477,
+    "average_latency_ms": 0.41193103790283203
+  },
+  "scalability": {
+    "200": {
+      "processed_orders": 200,
+      "throughput_ops": 7255.137818600106,
+      "total_time_seconds": 0.02756667137145996,
+      "orders_per_second": 7255.137818600106
+    },
+    "400": {
+      "processed_orders": 400,
+      "throughput_ops": 6532.8530876552195,
+      "total_time_seconds": 0.06122899055480957,
+      "orders_per_second": 6532.8530876552195
+    },
+    "600": {
+      "processed_orders": 600,
+      "throughput_ops": 8100.81311281216,
+      "total_time_seconds": 0.0740666389465332,
+      "orders_per_second": 8100.81311281216
+    },
+    "800": {
+      "processed_orders": 800,
+      "throughput_ops": 8703.86187719189,
+      "total_time_seconds": 0.09191322326660156,
+      "orders_per_second": 8703.86187719189
+    },
+    "1000": {
+      "processed_orders": 1000,
+      "throughput_ops": 8621.420848595471,
+      "total_time_seconds": 0.11599016189575195,
+      "orders_per_second": 8621.420848595471
+    }
+  }
+}

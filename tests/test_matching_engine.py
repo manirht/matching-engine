@@ -1,7 +1,7 @@
 import unittest
 import asyncio
 from decimal import Decimal
-from datetime import datetime
+from datetime import datetime,timezone
 
 from src.models.order import Order, OrderSide, OrderType
 from src.engine.matching_engine import MatchingEngine
@@ -21,7 +21,7 @@ class TestMatchingEngine(unittest.TestCase):
             side=OrderSide.BUY,
             quantity=Decimal('1.0'),
             price=Decimal('50000.0'),
-            timestamp=datetime.utcnow()
+            timestamp=datetime.now(timezone.utc)
         )
         
         # Add sell order that matches
@@ -32,7 +32,7 @@ class TestMatchingEngine(unittest.TestCase):
             side=OrderSide.SELL,
             quantity=Decimal('1.0'),
             price=Decimal('50000.0'),
-            timestamp=datetime.utcnow()
+            timestamp=datetime.now(timezone.utc)
         )
         
         # Process buy order (should rest in book)
@@ -55,7 +55,7 @@ class TestMatchingEngine(unittest.TestCase):
             side=OrderSide.SELL,
             quantity=Decimal('2.0'),
             price=Decimal('51000.0'),
-            timestamp=datetime.utcnow()
+            timestamp=datetime.now(timezone.utc)
         )
         
         # Then market order against it
@@ -66,7 +66,7 @@ class TestMatchingEngine(unittest.TestCase):
             side=OrderSide.BUY,
             quantity=Decimal('1.5'),
             price=None,
-            timestamp=datetime.utcnow()
+            timestamp=datetime.now(timezone.utc)
         )
         
         asyncio.run(self.engine.process_order(limit_order))

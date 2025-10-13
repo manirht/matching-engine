@@ -2,7 +2,7 @@ import asyncio
 from decimal import Decimal
 from typing import Dict, List, Optional
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 import logging
 from concurrent.futures import ThreadPoolExecutor
 
@@ -11,14 +11,19 @@ from src.models.trade import Trade
 from .order_book import OrderBook
 
 class MatchingEngine:
-    def __init__(self):
+    def __init__(self, websocket_server=None):
         self.order_books: Dict[str, OrderBook] = {}
         self.trade_history: Dict[str, List[Trade]] = {}
         self.order_cache: Dict[str, Order] = {}
         self.processed_orders = 0
-        self.start_time = datetime.utcnow()
+        self.start_time = datetime.now(timezone.utc)
         self.thread_pool = ThreadPoolExecutor(max_workers=4)
+        self.websocket_server = websocket_server
         self.logger = logging.getLogger("MatchingEngine")
+    
+    def set_websocket_server(self, websocket_server):
+        """Set the WebSocket server for real-time updates"""
+        self.websocket_server = websocket_server
     
     async def process_order(self, order: Order) -> List[Trade]:
         symbol = order.symbol
@@ -38,8 +43,17 @@ class MatchingEngine:
             order
         )
         
+        # Record trades and broadcast
         for trade in trades:
             self.trade_history[symbol].append(trade)
+            
+            # Broadcast trade via WebSocket if available
+            if self.websocket_server:
+                await self.websocket_server.broadcast_trade(trade)
+        
+        # Broadcast order book update via WebSocket if available
+        if self.websocket_server and (trades or order.order_type == OrderType.LIMIT):
+            await self.websocket_server.broadcast_order_book_update(symbol)
         
         self.processed_orders += 1
         return trades
@@ -58,11 +72,11 @@ class MatchingEngine:
             "best_ask": str(bbo[1]) if bbo[1] else None,
             "bids": depth_data["bids"],
             "asks": depth_data["asks"],
-            "timestamp": datetime.utcnow().isoformat() + "Z"
+            "timestamp": datetime.now(timezone.utc).isoformat() + "Z"
         }
     
     def get_performance_stats(self) -> Dict:
-        uptime = (datetime.utcnow() - self.start_time).total_seconds()
+        uptime = (datetime.now(timezone.utc) - self.start_time).total_seconds()
         return {
             "processed_orders": self.processed_orders,
             "uptime_seconds": uptime,

@@ -3,7 +3,7 @@ from decimal import Decimal
 from enum import Enum
 from typing import Optional
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 
 class OrderSide(Enum):
     BUY = "buy"

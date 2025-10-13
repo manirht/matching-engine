@@ -1,7 +1,7 @@
 import asyncio
 import time
 from decimal import Decimal
-from datetime import datetime
+from datetime import datetime,timezone
 import random
 import sys
 import os
@@ -39,7 +39,7 @@ async def run_benchmark(num_orders: int):
             side=side,
             quantity=quantity,
             price=price,
-            timestamp=datetime.utcnow()
+            timestamp=datetime.now(timezone.utc)
         )
         orders.append(order)
 

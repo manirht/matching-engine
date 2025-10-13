@@ -1,0 +1,84 @@
+2025-10-11 17:17:15,377 - Application - INFO - Starting Matching Engine Application
+2025-10-11 17:17:15,381 - RESTAPI - INFO - Starting REST API on localhost:5000
+2025-10-11 17:17:15,381 - Application - INFO - Application started successfully
+2025-10-11 17:17:15,381 - Application - INFO - REST API available at: http://localhost:5000
+2025-10-11 17:17:15,381 - Application - INFO - Use Ctrl+C to stop the application
+2025-10-11 17:17:15,455 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-10-11 17:17:15,457 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-11 17:24:15,262 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 17:24:15] "POST /order HTTP/1.1" 200 -
+2025-10-11 17:24:56,362 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 17:24:56] "POST /order HTTP/1.1" 200 -
+2025-10-12 10:47:24,183 - Application - INFO - Starting Matching Engine Application
+2025-10-12 10:47:24,183 - RESTAPI - INFO - Starting REST API on localhost:5000
+2025-10-12 10:47:24,183 - Application - INFO - Application started successfully
+2025-10-12 10:47:24,183 - Application - INFO - REST API available at: http://localhost:5000
+2025-10-12 10:47:24,183 - Application - INFO - Use Ctrl+C to stop the application
+2025-10-12 10:47:24,275 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-10-12 10:47:24,275 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 10:48:38,130 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:48:38] "[33mGET /orderbook/BTC-USDT HTTP/1.1[0m" 404 -
+2025-10-12 10:49:00,108 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:49:00] "POST /order HTTP/1.1" 200 -
+2025-10-12 10:49:12,066 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:49:12] "POST /order HTTP/1.1" 200 -
+2025-10-12 10:49:22,732 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:49:22] "GET /orderbook/BTC-USDT HTTP/1.1" 200 -
+2025-10-12 10:50:01,829 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:50:01] "GET /stats HTTP/1.1" 200 -
+2025-10-12 14:18:26,515 - Application - INFO - Starting Matching Engine Application
+2025-10-12 14:18:26,515 - MarketDataWebSocket - INFO - Starting WebSocket server on localhost:8765
+2025-10-12 14:18:26,536 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-10-12 14:18:26,538 - websockets.server - INFO - server listening on [::1]:8765
+2025-10-12 14:18:26,538 - RESTAPI - INFO - Starting REST API on localhost:5000
+2025-10-12 14:18:26,538 - Application - INFO - Application started successfully
+2025-10-12 14:18:26,540 - Application - INFO - REST API available at: http://localhost:5000
+2025-10-12 14:18:26,540 - Application - INFO - WebSocket server available at: ws://localhost:8765
+2025-10-12 14:18:26,542 - Application - INFO - Use Ctrl+C to stop the application
+2025-10-12 14:18:26,594 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-10-12 14:18:26,596 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 14:20:07,505 - websockets.server - INFO - connection open
+2025-10-12 14:20:37,715 - websockets.server - INFO - connection closed
+2025-10-12 14:20:54,316 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:20:54] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:21:09,677 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:21:09] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:27:33,988 - websockets.server - INFO - connection open
+2025-10-12 14:28:04,218 - websockets.server - INFO - connection closed
+2025-10-12 14:28:45,695 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:28:45] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:28:54,977 - websockets.server - INFO - connection open
+2025-10-12 14:28:59,113 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:28:59] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:29:22,013 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:29:22] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:29:25,039 - websockets.server - INFO - connection closed
+2025-10-12 14:30:07,059 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:30:07] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:46:11,933 - websockets.server - INFO - connection open
+2025-10-12 14:46:32,175 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:46:32] "GET /orderbook/BTC-USDT HTTP/1.1" 200 -
+2025-10-12 14:47:00,359 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:47:00] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:47:33,618 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:47:33] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:48:35,364 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:48:35] "GET /orderbook/BTC-USDT HTTP/1.1" 200 -
+2025-10-12 14:48:53,518 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:48:53] "GET /stats HTTP/1.1" 200 -
+2025-10-12 14:49:44,201 - websockets.server - INFO - connection closed
+2025-10-12 14:51:09,240 - websockets.server - INFO - connection open
+2025-10-12 14:51:13,217 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:51:13] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:51:16,271 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:51:16] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:51:19,321 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:51:19] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:51:22,363 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:51:22] "POST /order HTTP/1.1" 200 -
+2025-10-12 14:51:25,417 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:51:25] "GET /orderbook/BTC-USDT HTTP/1.1" 200 -
+2025-10-12 14:51:27,471 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 14:51:27] "GET /stats HTTP/1.1" 200 -
+2025-10-12 14:51:32,469 - websockets.server - INFO - connection closed
+2025-10-12 19:20:02,380 - Application - INFO - Starting Matching Engine Application
+2025-10-12 19:20:02,380 - MarketDataWebSocket - INFO - Starting WebSocket server on localhost:8765
+2025-10-12 19:20:02,387 - websockets.server - INFO - server listening on [::1]:8765
+2025-10-12 19:20:02,387 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-10-12 19:20:02,387 - RESTAPI - INFO - Starting REST API on localhost:5000
+2025-10-12 19:20:02,387 - Application - INFO - Application started successfully
+2025-10-12 19:20:02,390 - Application - INFO - REST API available at: http://localhost:5000
+2025-10-12 19:20:02,391 - Application - INFO - WebSocket server available at: ws://localhost:8765
+2025-10-12 19:20:02,394 - Application - INFO - Use Ctrl+C to stop the application
+2025-10-12 19:20:02,421 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-10-12 19:20:02,426 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 19:21:50,105 - websockets.server - INFO - connection open
+2025-10-12 19:22:49,668 - websockets.server - INFO - connection open
+2025-10-12 19:22:53,675 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:22:53] "POST /order HTTP/1.1" 200 -
+2025-10-12 19:22:56,712 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:22:56] "POST /order HTTP/1.1" 200 -
+2025-10-12 19:22:59,807 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:22:59] "POST /order HTTP/1.1" 200 -
+2025-10-12 19:23:02,839 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:23:02] "POST /order HTTP/1.1" 200 -
+2025-10-12 19:23:05,886 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:23:05] "GET /orderbook/BTC-USDT HTTP/1.1" 200 -
+2025-10-12 19:23:07,927 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:23:07] "GET /stats HTTP/1.1" 200 -
+2025-10-12 19:23:12,950 - websockets.server - INFO - connection closed
+2025-10-12 21:22:39,188 - websockets.server - INFO - connection closed
